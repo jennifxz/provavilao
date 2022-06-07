@@ -13,3 +13,10 @@ SELECT
         ds_maldades maldades,
         bt_superpoder superpoder
 from tb_vilao;
+
+
+-- CSU03 DELETAR VILÃO
+
+delete from tb_vilao
+	where id_vilao = 1; 
+	

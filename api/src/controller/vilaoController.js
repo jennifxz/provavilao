@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { consultarViloes, inserirVilao } from "../repository/vilaoRepository.js";
+import { consultarViloes, deletarViloes, inserirVilao } from "../repository/vilaoRepository.js";
 
 const server = Router();
 
@@ -39,5 +39,21 @@ server.get('/vilao', async (req, resp) => {
         
     }
 })
+
+
+server.delete('/deletarViloes/:id', async (req, resp) => {
+    try {
+        const { id } = req.params;
+        const resposta = await deletarViloes(id)
+        if( !resposta) {
+            throw new Error ('Não foi possível deletar este vilão. PODER DELE É MAIS DE 8000!')
+        }
+        resp.status(204).send()
+    } catch (err) {
+        resp.status(401).send ({
+            erro: err.message
+        });
+    }
+}) 
 
 export default server;

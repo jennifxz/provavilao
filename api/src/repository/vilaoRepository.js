@@ -26,3 +26,13 @@ export async function consultarViloes() {
     return linhas; 
     
 }
+
+export async function deletarViloes (id) {
+    const comando = `
+    delete from tb_vilao
+	where id_vilao = ?`
+
+    const [resposta] = await con.query(comando, [id]) 
+    return resposta.affectedRows
+
+}

@@ -18,4 +18,6 @@ response(200)
 }
 
 
+(3) /DELETE /deletarConsulta /:id
 
+response (204)

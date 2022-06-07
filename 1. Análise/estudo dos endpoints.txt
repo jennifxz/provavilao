@@ -1,0 +1,21 @@
+(1) /POST /vilao
+
+request body 
+{
+    "nome":"",
+    "maldades":"",
+    "superpoder":false
+}
+
+(2) /GET /vilao
+
+response(200)
+{
+    "id":0
+    "nome":"",
+    "maldades":"",
+    "superpoder":false
+}
+
+
+

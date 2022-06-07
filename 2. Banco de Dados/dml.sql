@@ -20,3 +20,12 @@ from tb_vilao;
 delete from tb_vilao
 	where id_vilao = 1; 
 	
+
+-- CSU04:: CONSULTAR POR ID 
+
+SELECT id_vilao			id,
+       nm_vilao 		nome,
+       ds_maldades 		maldades,
+	   bt_superpoder 	superpoder
+	FROM tb_vilao
+	WHERE id_vilao		= 1;

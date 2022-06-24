@@ -12,9 +12,7 @@ server.post('/vilao', async (req, resp) => {
         if(!novoVilao.maldades) {
             throw new Error ('Maldades do vilão é obrigatório.');
         }
-        if(!novoVilao.superpoder) {
-            throw new Error ('Super Poder do vilão é obrigatório');
-        }
+       
         
         const vilaoInserido = await inserirVilao(novoVilao);
 
